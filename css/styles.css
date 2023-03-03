@@ -1,0 +1,109 @@
+:root {
+    --column-one: hsl(31, 77%, 52%);
+    --column-two: hsl(184, 100%, 22%);
+    --column-three: hsl(179, 100%, 13%);
+    --parragraphs: hsla(0, 0%, 100%, 0.75);
+    --back-head-button: hsl(0, 0%, 95%);
+    font-family: 'Big Shoulders Display', cursive; /*700*/
+    font-family: 'Lexend Deca', sans-serif; /*400*/
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--back-head-button);
+}
+main {
+    display: grid;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+h1 {
+    color: white;
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+p {
+    color: var(--parragraphs);
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    margin: 0 2.4em 4em 0;
+}
+button {
+    background-color: var(--back-head-button);
+    border: none;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    width: 150px;
+    height: 50px;
+    border-radius: 1.5rem;
+    cursor: pointer;
+}
+button:hover {
+    background-color: white;
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 850px;
+    height: 450px;
+}
+.section-one, .section-two, .section-three {
+    padding: 2em 0.5em 2em 2.5em;
+}
+.section-one {
+    background-color: var(--column-one);
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+.section-two {
+    background-color: var(--column-two);
+}
+.section-three {
+    background-color: var(--column-three);
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+.button-one {
+    color: var(--column-one);
+}
+.button-two {
+    color: var(--column-two);
+}
+.button-three {
+    color: var(--column-three);
+}
+@media (max-width: 850px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    p {
+        font-size: 1rem;
+        margin: 0 1.5em 4em 0;
+    }
+    .container {
+        display: grid;
+        grid: none;
+        width: 345px;
+        height: 1450px;
+    }
+    .section-one, .section-two, .section-three {
+        padding: 4em 2em 2em 3em;
+    }
+    .section-one {
+        background-color: var(--column-one);
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+        border-bottom-left-radius: 0;
+    }
+    .section-three {
+        border-bottom-left-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+        border-top-right-radius: 0;
+    }
+}
